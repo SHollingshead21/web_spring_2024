@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollingshead | Choose Your Own Adventure Game</title>
+</head>
+<body>
+    <script>
+        function playGame() {
+        var enterCabin = confirm("You come across a strange house in the woods, do you want to go in?");
+        alert(enterCabin);
+        if (enterCabin == true) {
+            //we enter the cabin
+            alert("You decide to enter the cabin and find on the table three delicious looking bowls of porridge.");
+
+            var porridgeChoice = prompt("Bowl 1 has a ton of steam coming off of it. Bowl 2 is clumpy and green. Bowl 3 has some steam and a lovely drizzle of honey on top. Do you eat 1, 2, or 3?");
+            if (porridgeChoice == 1) {
+                alert("The porridge was so hot your mouth filled with blisters. They suddenly pop and fill your throat with pus. You drown. Game over.");
+            } else if (porridgeChoice == 2) {
+                alert("The porridge has clearly been sitting out for a very long time. It is cold and the green color is from a deadly mold. You eat it and fall over dead. Game over.");
+            } else {
+                alert("That porridge was juuuust right! Yummy!");
+                var chairChoice = prompt("Your belly is full and you need somewhere to sit and digest. You walk into the living room and see three chairs: a big chair, a medium chair, and a small chair. Which chair do you want to sit in? Please type big, medium, or small.");
+                if (chairChoice == "big") {
+                    alert("This chair is so tall you can't climb up into it. You try, but fall and hit your head. You are never found again. Game over.");
+                } else if (chairChoice == "medium") {
+                    alert("You manage to get into this chair, but it's too tall for you to get out of it without hurting yourself. You are stuck here forever. Game over.");
+                } else {
+                    alert("This chair is juuust right! You are able to sit and read a book while you digest. Your belly feels much better now. You decide to continue exploring.");
+                    //the following code is for the final choice.
+                    var bedChoice = prompt("You walk into the bedroom and find 3 beds: a big one, medium one, and small one. You are tired from burgling this house and decide to take a nap. Which bed do you sleep in? Please type big, medium, or small.");
+                    if (bedChoice == "big") {
+                        alert("game over");
+                    } else if (bedChoice == "medium") {
+                        alert("Game over");
+                    } else {
+                        alert("You fall into a deep slumber...");
+                        alert("You awake to find three angry bears staring at you...");
+                        alert("You run, but they give chase and overtake you...");
+                        alert("The bears have their own delicious meal!");
+                        alert("THE END!");
+                    }
+                }
+            
+            }
+        } 
+        else {
+            //we do not enter the cabin
+            alert("Wow, that was the shortest and most boring game ever. You go home. Game over.");
+        }
+    
+        var playAgain = confirm("Do you want to play again?");
+        if (playAgain == true) {
+            playGame();
+        } else {
+            alert("Thank you for playing! Goodbye!");
+        }
+    }
+        playGame();
+
+
+    </script>
+</body>
+</html>
